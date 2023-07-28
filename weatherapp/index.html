@@ -1,184 +1,172 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Weather App</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css"> 
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Weather App</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About this app</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"></a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input id="city"  class="form-control me-2" type="search" placeholder="Enter City" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-<h1 class="text-center">Weather for <span id="cityName"></span></h1>
 
-      <div class="container">
-        <main>
-            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-              <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                  <div class="card-header py-3">
-                    <h4 class="my-0 fw-normal">Humidity Information</h4>
-                  </div>
-                  <div class="card-body">
-                    <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light">/mo</small></h1>
-                    <ul class="list-unstyled mt-3 mb-4">
-                      <li>Feels Like <span id ="feels_like"></span>°C</li>
-                      <li>Wind Degrees is <span id ="wind_degrees"></span></li>
-                      <li>Humidity is <span id ="humidity"></span></li>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Weather App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
 
-                    </ul>
-                    <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                  <div class="card-header py-3">
-                    <h4 class="my-0 fw-normal">Temperature Info</h4>
-                  </div>
-                  <div class="card-body">
-                    <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light">/mo</small></h1>
-                    <ul class="list-unstyled mt-3 mb-4">
-                      <li>CLoud PCT is <span id ="cloud_pct"></span>%</li>
-                      <li>Temperature is <span id ="temp"></span>°C</li>
-                      <li>Maximum Temperature is <span id ="max_temp"></span>°C</li>
-                      <li>Minimum Temperature is <span id ="min_temp"></span>°C</li> 
-                    </ul>
-                    <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                  <div class="card-header py-3">
-                    <h4 class="my-0 fw-normal">Wind Info</h4>
-                  </div>
-                  <div class="card-body">
-                    <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light">/mo</small></h1>
-                    <ul class="list-unstyled mt-3 mb-4">
-                      <li>Wind Speed is <span id ="wind_speed"></span></li>
-                      <li> Sunrise Time is <span id ="sunrise"></span></li>
-                      <li> Sunset Time is <span id ="sunset"></span></li>
-                    </ul>
-                    <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
-            <h2 class="display-6 text-center mb-4">Weather of other common cities in Canada</h2>
-        
-            <div class="table-responsive">
-              <table class="table text-center">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>Cloud Percentage</th>
-                    <th>Feels Like</th>
-                    <th>Humidity</th>
-                    <th>Max Temp</th>
-                    <th>Min Temp</th>
-                    <th>Sunrise</th>
-                    <th>Sunset</th>
-                    <th>Temperature</th>
-                    <th>Wind Degrees</th>
-                    <th>Wind Speed</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row" class="text-start">Calgary</th>
-                    <td><span id="calgary_cloud_pct"></span></td>
-                    <td><span id="calgary_feels_like"></span>°C</td>
-                    <td><span id="calgary_humidity"></span></td>
-                    <td><span id="calgary_max_temp"></span>°C</td>
-                    <td><span id="calgary_min_temp"></span>°C</td>
-                    <td><span id="calgary_sunrise"></span></td>
-                    <td><span id="calgary_sunset"></span></td>
-                    <td><span id="calgary_temp"></span>°C</td>
-                    <td><span id="calgary_wind_degrees"></span></td>
-                    <td><span id="calgary_wind_speed"></span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="text-start">Toronto</th>
-                    <td><span id="toronto_cloud_pct"></span></td>
-                    <td><span id="toronto_feels_like"></span>°C</td>
-                    <td><span id="toronto_humidity"></span></td>
-                    <td><span id="toronto_max_temp"></span>°C</td>
-                    <td><span id="toronto_min_temp"></span>°C</td>
-                    <td><span id="toronto_sunrise"></span></td>
-                    <td><span id="toronto_sunset"></span></td>
-                    <td><span id="toronto_temp"></span>°C</td>
-                    <td><span id="toronto_wind_degrees"></span></td>
-                    <td><span id="toronto_wind_speed"></span></td>
-                  </tr>
-                </tbody>
-        
-                <tbody>
-                  <tr>
-                    <th scope="row" class="text-start">Halifax</th>
-                    <td><span id="halifax_cloud_pct"></span></td>
-                    <td><span id="halifax_feels_like"></span>°C</td>
-                    <td><span id="halifax_humidity"></span></td>
-                    <td><span id="halifax_max_temp"></span>°C</td>
-                    <td><span id="halifax_min_temp"></span>°C</td>
-                    <td><span id="halifax_sunrise"></span></td>
-                    <td><span id="halifax_sunset"></span></td>
-                    <td><span id="halifax_temp"></span>°C</td>
-                    <td><span id="halifax_wind_degrees"></span></td>
-                    <td><span id="halifax_wind_speed"></span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="text-start">Winnipeg</th>
-                    <td><span id="winnipeg_cloud_pct"></span></td>
-                    <td><span id="winnipeg_feels_like"></span>°C</td>
-                    <td><span id="winnipeg_humidity"></span></td>
-                    <td><span id="winnipeg_max_temp"></span>°C</td>
-                    <td><span id="winnipeg_min_temp"></span>°C</td>
-                    <td><span id="winnipeg_sunrise"></span></td>
-                    <td><span id="winnipeg_sunset"></span></td>
-                    <td><span id="winnipeg_temp"></span>°C</td>
-                    <td><span id="winnipeg_wind_degrees"></span></td>
-                    <td><span id="winnipeg_wind_speed"></span></td>
-                  </tr>     
-                </tbody>
-              </table>
-            </div>
-          </main>
-      </div>
+<body>
+  <h1>Weather App</h1>
+  <nav>
+    <form class="d-flex" role="search">
+      <input id="city" class="form-control me-2" type="search" placeholder="Enter City" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+    </form>
+    </div>
+    </div>
+  </nav>
+  <h1 class="text-center">Weather for <span id="cityName"></span></h1>
+
+  <div class="container">
+    <ul>
+      <li>Feels Like <span id="feels_like"></span>°C</li>
+      <li>Wind Degrees is <span id="wind_degrees"></span></li> 
+      <li>Humidity is <span id="humidity">%</span></li>
+
+
+<div class="cloudpct">
+      <li class="weather-info">
+        <span class="material-symbols-outlined">
+          cloud
+        </span>
+        <span class="weather-text">Cloud Percentage is <span id="cloud_pct"></span>%</span>
+      </li>
+</div>
+
+<div class="tempp">
+  <li class="weather-info">
+    <span class="material-symbols-outlined">
+      device_thermostat
+      </span>
+    <span class="weather-text">Temperature is<span id="temp"></span>°C</span>
+  </li>
+</div>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script src="Script.js"></script>
+<div class="maxtempp">
+  <li class="weather-info">
+    <span class="material-symbols-outlined">
+      thermometer_add
+      </span>
+    <span class="weather-text">Maximum Temperature is<span id="max_temp"></span>°C</span>
+  </li>
+</div>
+
+
+<div class="mintempp">
+  <li class="weather-info">
+    <span class="material-symbols-outlined">
+      thermometer_minus
+      </span>
+    <span class="weather-text">Minimum Temperature is<span id="min_temp"></span>°C</span>
+  </li>
+</div>
+
+
+      <li>Wind Speed is <span id="wind_speed"></span> km/h</li>
+      <li> Sunrise Time is <span id="sunrise"></span></li>
+      <li> Sunset Time is <span id="sunset"></span></li>
+    </ul>
+  </div>
+
+
+
+
+  <h2 class="display-6 text-center mb-4">Weather of other common cities in Canada</h2>
+
+  <div class="table-responsive">
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Cloud Percentage</th>
+          <th>Feels Like</th>
+          <th>Humidity</th>
+          <th>Max Temp</th>
+          <th>Min Temp</th>
+          <th>Sunrise</th>
+          <th>Sunset</th>
+          <th>Temperature</th>
+          <th>Wind Degrees</th>
+          <th>Wind Speed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="text-start">Calgary</th>
+          <td><span id="calgary_cloud_pct"></span></td>
+          <td><span id="calgary_feels_like"></span>°C</td>
+          <td><span id="calgary_humidity"></span></td>
+          <td><span id="calgary_max_temp"></span>°C</td>
+          <td><span id="calgary_min_temp"></span>°C</td>
+          <td><span id="calgary_sunrise"></span></td>
+          <td><span id="calgary_sunset"></span></td>
+          <td><span id="calgary_temp"></span>°C</td>
+          <td><span id="calgary_wind_degrees"></span></td>
+          <td><span id="calgary_wind_speed"></span></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Toronto</th>
+          <td><span id="toronto_cloud_pct"></span></td>
+          <td><span id="toronto_feels_like"></span>°C</td>
+          <td><span id="toronto_humidity"></span></td>
+          <td><span id="toronto_max_temp"></span>°C</td>
+          <td><span id="toronto_min_temp"></span>°C</td>
+          <td><span id="toronto_sunrise"></span></td>
+          <td><span id="toronto_sunset"></span></td>
+          <td><span id="toronto_temp"></span>°C</td>
+          <td><span id="toronto_wind_degrees"></span></td>
+          <td><span id="toronto_wind_speed"></span></td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th scope="row" class="text-start">Halifax</th>
+          <td><span id="halifax_cloud_pct"></span></td>
+          <td><span id="halifax_feels_like"></span>°C</td>
+          <td><span id="halifax_humidity"></span></td>
+          <td><span id="halifax_max_temp"></span>°C</td>
+          <td><span id="halifax_min_temp"></span>°C</td>
+          <td><span id="halifax_sunrise"></span></td>
+          <td><span id="halifax_sunset"></span></td>
+          <td><span id="halifax_temp"></span>°C</td>
+          <td><span id="halifax_wind_degrees"></span></td>
+          <td><span id="halifax_wind_speed"></span></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Winnipeg</th>
+          <td><span id="winnipeg_cloud_pct"></span></td>
+          <td><span id="winnipeg_feels_like"></span>°C</td>
+          <td><span id="winnipeg_humidity"></span></td>
+          <td><span id="winnipeg_max_temp"></span>°C</td>
+          <td><span id="winnipeg_min_temp"></span>°C</td>
+          <td><span id="winnipeg_sunrise"></span></td>
+          <td><span id="winnipeg_sunset"></span></td>
+          <td><span id="winnipeg_temp"></span>°C</td>
+          <td><span id="winnipeg_wind_degrees"></span></td>
+          <td><span id="winnipeg_wind_speed"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </main>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="Script.js"></script>
 </body>
+
 </html>
