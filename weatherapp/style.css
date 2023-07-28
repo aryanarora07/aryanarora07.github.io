@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #c90e0e;
+    background-color: #edc297;
   }
   
   .navbar {
@@ -9,13 +8,97 @@ body {
     color: #4c7ee8;
   }
   
-  .container {
+  ul {
     margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+    gap: 10px;
+
+
   }
+
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+  .weather-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .weather-text {
+    /* margin-left: 10px; */
+  }
+
+  .cloudpct {
+    background-color: lightblue;
+    margin-top: 10px;
+    padding: 2% 1%; /* Adjust the padding on top/bottom and left/right */
+    margin-right: 10px;
+    font-size: x-large;
+    width: 75%;
+  }
+
+  .tempp{
+    background-color: lightcoral;
+    margin-top: 10px;
+    padding: 2% 1%; /* Adjust the padding on top/bottom and left/right */
+    margin-right: 10px;
+    font-size: x-large;
+    width: 70%;
+  }
+
+  .cloudpct {
+    background-color: lightblue;
+    margin-top: 10px;
+    padding: 2% 1%; /* Adjust the padding on top/bottom and left/right */
+    margin-right: 10px;
+    font-size: x-large;
+    width: fit-content;
+
+  }
+
+  .tempp{
+    background-color: lightcoral;
+    margin-top: 10px;
+    padding: 2% 1%; /* Adjust the padding on top/bottom and left/right */
+    margin-right: 10px;
+    font-size: x-large;
+    width: fit-content;
+  }
+
+  .maxtempp{
+    background-color: lightcyan;
+    margin-top: 10px;
+    padding: 2% 1%; /* Adjust the padding on top/bottom and left/right */
+    margin-right: 10px;
+    font-size: x-large;
+    width: fit-content;
+
+  }
+
+  .mintempp{
+    background-color: rgb(173, 227, 188);
+    margin-top: 10px;
+    padding: 2% 1%; /* Adjust the padding on top/bottom and left/right */
+    margin-right: 10px;
+    font-size: x-large;
+    width: fit-content;
+
+  }
+  
+  
   
   h1 {
     font-size: 32px;
     font-weight: bold;
+    text-align: center;
+    color: #007bff;
   }
   
   h2 {
