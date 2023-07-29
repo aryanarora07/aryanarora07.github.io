@@ -9,7 +9,7 @@ const options = {
 
 const cities = ["Calgary", "Toronto", "Halifax", "Winnipeg"];
 
-// Function to get weather data for specific cities and display them in columns
+
 const getCitiesWeather = () => {
   cities.forEach(city => {
     const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city;
@@ -17,8 +17,8 @@ const getCitiesWeather = () => {
       .then(response => response.json())
       .then((response) => {
         console.log(response);
-  
-        // Update the elements for the current city in the table
+
+
         document.getElementById(city.toLowerCase() + '_cloud_pct').textContent = response.cloud_pct;
         document.getElementById(city.toLowerCase() + '_feels_like').textContent = response.feels_like;
         document.getElementById(city.toLowerCase() + '_humidity').textContent = response.humidity;
@@ -34,7 +34,7 @@ const getCitiesWeather = () => {
   });
 };
 
-// Function to get weather data for searched city and display in cards
+
 const getWeather = (city) => {
   const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city;
   cityName.innerHTML = city;
@@ -43,8 +43,8 @@ const getWeather = (city) => {
     .then(response => response.json())
     .then((response) => {
       console.log(response);
-  
-      // Update the elements for the current city in the cards
+
+
       document.getElementById('cloud_pct').textContent = response.cloud_pct;
       document.getElementById('feels_like').textContent = response.feels_like;
       document.getElementById('humidity').textContent = response.humidity;
@@ -59,7 +59,7 @@ const getWeather = (city) => {
     .catch(err => console.error(err));
 };
 
-// Set default city to Vancouver for the cards
+
 getWeather("Vancouver");
 
 submit.addEventListener("click", (e) => {
@@ -68,7 +68,7 @@ submit.addEventListener("click", (e) => {
   getWeather(cityValue);
 });
 
-// Fetch weather data for the specific cities when the page loads
+
 getCitiesWeather();
 
 
