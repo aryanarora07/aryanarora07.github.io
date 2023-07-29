@@ -13,7 +13,12 @@
 </head>
 
 <body>
-  <h1>Weather App</h1>
+
+
+  <div class="start">
+    <h1>The Weather App</h1>
+  </div>
+
   <nav>
     <form class="d-flex" role="search">
       <input id="city" class="form-control me-2" type="search" placeholder="Enter City" aria-label="Search">
@@ -22,67 +27,121 @@
     </div>
     </div>
   </nav>
-  <h1 class="text-center">Weather for <span id="cityName"></span></h1>
 
-  <div class="container">
-    <ul>
-      <li>Feels Like <span id="feels_like"></span>°C</li>
-      <li>Wind Degrees is <span id="wind_degrees"></span></li> 
-      <li>Humidity is <span id="humidity">%</span></li>
+  <div class="heading">
+    <h1 class="text-center">Weather for <span id="cityName"></span></h1>
+  </div>
 
 
-<div class="cloudpct">
+  <ul>
+
+    <div class="feelslike">
+      <li class="weather-info">
+        <span class="material-symbols-outlined">
+          device_thermostat
+        </span>
+        <span class="weather-text">Feels Like <span id="feels_like"></span>°C</span>
+      </li>
+    </div>
+
+    <div class="winddegrees">
+      <li class="weather-info">
+        <span class="material-symbols-outlined">
+          air
+        </span>
+        <span class="weather-text">Wind Degrees <span id="wind_degrees"></span>°</span>
+      </li>
+    </div>
+
+    <div class="humidityy">
+      <li class="weather-info">
+        <span class="material-symbols-outlined">
+          humidity_percentage
+        </span>
+        <span class="weather-text">Humidity is <span id="humidity"></span>%</span>
+      </li>
+    </div>
+
+
+    <div class="cloudpct">
       <li class="weather-info">
         <span class="material-symbols-outlined">
           cloud
         </span>
         <span class="weather-text">Cloud Percentage is <span id="cloud_pct"></span>%</span>
       </li>
-</div>
+    </div>
 
-<div class="tempp">
-  <li class="weather-info">
-    <span class="material-symbols-outlined">
-      device_thermostat
-      </span>
-    <span class="weather-text">Temperature is<span id="temp"></span>°C</span>
-  </li>
-</div>
-
-
-
-<div class="maxtempp">
-  <li class="weather-info">
-    <span class="material-symbols-outlined">
-      thermometer_add
-      </span>
-    <span class="weather-text">Maximum Temperature is <span id="max_temp"></span>°C</span>
-  </li>
-</div>
-
-
-<div class="mintempp">
-  <li class="weather-info">
-    <span class="material-symbols-outlined">
-      thermometer_minus
-      </span>
-    <span class="weather-text">Minimum Temperature is <span id="min_temp"></span>°C</span>
-  </li>
-</div>
-
-
-      <li>Wind Speed is <span id="wind_speed"></span> km/h</li>
-      <li> Sunrise Time is <span id="sunrise"></span></li>
-      <li> Sunset Time is <span id="sunset"></span></li>
-    </ul>
-  </div>
+    <div class="tempp">
+      <li class="weather-info">
+        <span class="material-symbols-outlined">
+          device_thermostat
+        </span>
+        <span class="weather-text">Temperature is <span id="temp"></span>°C</span>
+      </li>
+    </div>
 
 
 
+    <div class="maxtempp">
+      <li class="weather-info">
+        <span class="material-symbols-outlined">
+          thermometer_add
+        </span>
+        <span class="weather-text">Maximum Temperature is <span id="max_temp"></span>°C</span>
+      </li>
+    </div>
 
 
-<div class="table-responsive">
-  <h2 class="display-6 text-center mb-4">Weather of other common cities in Canada</h2>
+    <div class="mintempp">
+      <li class="weather-info">
+        <span class="material-symbols-outlined">
+          thermometer_minus
+        </span>
+        <span class="weather-text">Minimum Temperature is <span id="min_temp"></span>°C</span>
+      </li>
+    </div>
+
+
+    <div class="windspeedd">
+      <li class="weather-info">
+        <span class="material-symbols-outlined">
+          air
+        </span>
+        <span class="weather-text">Wind Speed is<span id="wind_speed"></span> km/h</span>
+      </li>
+    </div>
+
+
+    <div class="sunrisee">
+      <li class="weather-info">
+        <span class="material-symbols-outlined">
+          sunny_snowing
+        </span>
+        <span class="weather-text">Sunrise Time is <span id="sunrise"></span></span>
+      </li>
+    </div>
+
+
+
+    <div class="sunsett">
+      <li class="weather-info">
+        <span class="material-symbols-outlined">
+          wb_twilight
+        </span>
+        <span class="weather-text">Sunset Time is <span id="sunset"></span></span>
+      </li>
+    </div>
+
+  </ul>
+
+
+
+
+
+
+  <div class="table-responsive">
+    <h2 class="display-6 text-center mb-4">Weather of other common cities in Canada</h2>
 
     <table class="table table-dark table-striped-columns">
       <thead>
@@ -158,7 +217,7 @@
         </tr>
       </tbody>
     </table>
-  </div> 
+  </div>
   </main>
   </div>
 
