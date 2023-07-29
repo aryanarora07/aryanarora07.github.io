@@ -32,7 +32,7 @@ body {
   }
   
   .weather-text {
-    /* margin-left: 10px; */
+    margin-left: 10px;
   }
 
   .cloudpct {
@@ -119,18 +119,22 @@ body {
     padding: 20px;
   }
   
-  .table {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+
+
   
   th, td {
     vertical-align: middle;
   }
   
   .table-responsive {
-    margin-top: 20px;
-    overflow-x: auto;
+    /* margin-top: 140px; */
+    /* overflow-x: auto;
+    align-self: flex-end; */
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
   }
   
   .btn-outline-primary {
