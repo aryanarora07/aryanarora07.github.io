@@ -4,6 +4,11 @@ body {
 }
 
 
+.logo {
+  width: 100px;
+  align-items: center;
+
+}
 
 #video-bg {
   position: fixed;
@@ -22,7 +27,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  /* Adjust the opacity (last value) to control darkness */
   z-index: -1;
 }
 
@@ -37,12 +41,75 @@ body {
   font-weight: bolder;
 }
 
+.subheading {
+  font-family: 'Verdana', sans-serif;
+  font-size: 50px;
+  color: #e8c19d;
+  font-weight: 700;
+}
 
 .start {
+  display: flex;
+  justify-content: center;
   margin: 20px;
   color: rgb(176, 220, 17);
   text-align: center;
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.app-heading {
+  font-size: 46px;
+  font-weight: bold;
+  color: #e6941afa;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+  font-family: 'Dancing Script', cursive;
+}
+
+
+.weather-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+}
+
+.weather-icon {
+  color: #000000;
+  font-size: 55px;
+  margin-right: 10px;
+}
+
+.weather-text {
+  font-size: x-large;
+  margin-left: 10px;
+  color: #333;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
 
 ul {
   margin-top: 30px;
@@ -50,17 +117,8 @@ ul {
   grid-template-columns: repeat(3, 1fr);
   list-style-type: none;
   gap: 10px;
-
-
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
-}
 
 .weather-info {
   display: flex;
@@ -77,7 +135,6 @@ ul {
   padding: 2% 1%;
   margin-right: 10px;
   font-size: x-large;
-  /* width: 75%; */
 }
 
 .tempp {
@@ -86,7 +143,6 @@ ul {
   padding: 2% 1%;
   margin-right: 10px;
   font-size: x-large;
-  /* width: 70%; */
 }
 
 .cloudpct {
@@ -95,8 +151,6 @@ ul {
   padding: 2% 1%;
   margin-right: 10px;
   font-size: x-large;
-  /* width: fit-content; */
-
 }
 
 .tempp {
@@ -105,7 +159,6 @@ ul {
   padding: 2% 1%;
   margin-right: 10px;
   font-size: x-large;
-  /* width: fit-content; */
 }
 
 .maxtempp {
@@ -114,7 +167,6 @@ ul {
   padding: 2% 1%;
   margin-right: 10px;
   font-size: x-large;
-  /* width: fit-content; */
 
 }
 
@@ -124,8 +176,6 @@ ul {
   padding: 2% 1%;
   margin-right: 10px;
   font-size: x-large;
-  /* width: fit-content; */
-
 }
 
 .feelslike {
@@ -134,7 +184,6 @@ ul {
   padding: 2% 1%;
   margin-right: 10px;
   font-size: x-large;
-  /* width: fit-content; */
 }
 
 .winddegrees {
@@ -143,7 +192,6 @@ ul {
   padding: 2% 1%;
   margin-right: 10px;
   font-size: x-large;
-  /* width: fit-content; */
 }
 
 
@@ -153,7 +201,6 @@ ul {
   padding: 2% 1%;
   margin-right: 10px;
   font-size: x-large;
-  /* width: fit-content; */
 }
 
 
@@ -163,7 +210,6 @@ ul {
   padding: 2% 1%;
   margin-right: 10px;
   font-size: x-large;
-  /* width: fit-content; */
 }
 
 .sunrisee {
@@ -172,7 +218,6 @@ ul {
   padding: 2% 1%;
   margin-right: 10px;
   font-size: x-large;
-  /* width: fit-content; */
 }
 
 .sunsett {
@@ -181,14 +226,22 @@ ul {
   padding: 2% 1%;
   margin-right: 10px;
   font-size: x-large;
-  /* width: fit-content; */
-
 }
 
 h2 {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 44px;
+  font-weight: 700;
   color: aliceblue;
+}
+
+.subheading2 {
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-family: 'Verdana', sans-serif;
+  ;
 }
 
 .card-header {
